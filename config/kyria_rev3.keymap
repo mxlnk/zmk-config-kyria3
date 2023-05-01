@@ -16,7 +16,7 @@
  */
 
 #define DEFAULT 0
-#define LOWER   1
+#define NUMS   1
 
 / {
     keymap {
@@ -24,15 +24,15 @@
 
         default_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  Q  |  W  |  E   |  R     |  T    |                                                                         |  Y    |  U    |  I    |  O   |   P      |   \       |
-            // | SHIFT |  A  |  S  |  D   |  F     |  G    |                                                                         |  H    |  J    |  K    |  L   |   ;      |  SHIFT '  |
-            // |  CTL  |  Z  |  X  |  C   |  V     |  B    |  TODO          |   (                |  |       )             |  TODO    |  N    |  M    |  ,    |  .   |   /      |   - _     |
-            //                     | GUI  | ALT    | TODO  |  SPACE         |   [{               |  |       }]            |  TODO    | TODO  | BSPC  | R-ALT |
+            // |  ESC  |  Q  |  W  |  E   |  R     |  T     |                                                                         |  Y    |  U    |  I    |  O   |   P      |   \       |
+            // | SHIFT |  A  |  S  |  D   |  F     |  G     |                                                                         |  H    |  J    |  K    |  L   |   ;      |  SHIFT '  |
+            // |  CTL  |  Z  |  X  |  C   |  V     |  B     |  TODO          |   (                |  |       )             |  TODO    |  N    |  M    |  ,    |  .   |   /      |   - _     |
+            //                     | GUI  | ALT    |  NUMS  |  SPACE         |   [{               |  |       }]            |  TODO    | TODO  | BSPC  | R-ALT |
             bindings = <
             &kp ESC   &kp Q &kp W &kp E    &kp R    &kp T                                                                             &kp Y   &kp U  &kp I     &kp O   &kp P    &kp BSLH
             &kp LSHFT &kp A &kp S &kp D    &kp F    &kp G                                                                             &kp H   &kp J  &kp K     &kp L   &kp SEMI &mt RSHIFT SQT
-            &kp LCTRL &kp Z &kp X &kp C    &kp V    &kp B   &kp LSHFT        &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS &kp LSHFT  &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &kp MINUS
-                                  &kp LGUI &kp LALT &kp RET &mt RSHIFT SPACE &kp LEFT_BRACKET        &kp RIGHT_BRACKET     &kp SPACE  &kp TAB &kp BSPC &kp RALT
+            &kp LCTRL &kp Z &kp X &kp C    &kp V    &kp B    &kp LSHFT        &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS &kp LSHFT  &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &kp MINUS
+                                  &kp LGUI &kp LALT &mo NUMS &mt RSHIFT SPACE &kp LEFT_BRACKET        &kp RIGHT_BRACKET     &kp SPACE  &kp TAB &kp BSPC &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp UP DOWN>;
