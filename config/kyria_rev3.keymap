@@ -32,7 +32,7 @@
                                   &kp LGUI &kp LALT &kp RET &mt RSHIFT SPACE &kp LEFT_BRACKET        &kp RIGHT_BRACKET     &kp SPACE  &kp TAB &kp BSPC &kp RALT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp UP DOWN>;
 		};
 	};
 };
