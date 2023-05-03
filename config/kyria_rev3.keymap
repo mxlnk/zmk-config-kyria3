@@ -41,35 +41,35 @@
 
         numbers {
             // ---------------------------------------------------------------------------------------------------------------------------------
-            // | _ | _ |  !  |  @   |  &   | _ |                  | _ |  7  |  8  |  9  |   =   | _ |
-            // | _ | _ |  #  |  $   |  ~   | _ |                  | _ |  4  |  5  |  6  |   *   | ` |
-            // | _ | _ |  %  |  ^   |  _   | _ | _ | _ |  | _ | _ | _ |  1  |  2  |  3  |   +   | _ |
-            //               |  _   |  _   | _ | _ | _ |  | _ | _ | _ |  0  |  _  |
+            // | _ | _ |  !         |  @        |  &      | _   |                           | _   |  7  |  8    |  9   |     =         |   _ |
+            // | _ | _ |  #         |  $        |  ~      | _   |                           | _   |  4  |  5    |  6   |     *         |   ` |
+            // | _ | _ |  %         |  ^        |  _      | _   | _   | _ |     | _   | _   | _   |  1  |  2    |  3   |     +         |   _ |
+            //                      |  _        |  _      | _   | _   | _ |     | _   | _   | _   |  0  |  _    |
             bindings = <
-            &none &none &kp EXCL 	&kp AT_SIGN &kp AMPS	&none                              &none &kp N7  &kp N8 &kp N9 &kp KP_EQUAL    	&none
-            &none &none &kp HASH 	&kp DOLLAR 	&kp TILDE	&none                              &none &kp N4  &kp N5 &kp N6 &kp KP_MULTIPLY 	&kp GRAVE
-            &none &none &kp PERCENT &kp CARET 	&none 		&none &none &none      &none &none &none &kp N1  &kp N2 &kp N3 &kp KP_PLUS 		&none
-                     		&none 		&none 		&none &none &none      &none &none &none &kp N0 &none
+            &none &none &kp EXCL     &kp AT_SIGN &kp AMPS  &none                             &none &kp N7 &kp N8 &kp N9 &kp KP_EQUAL    &none
+            &none &none &kp HASH     &kp DOLLAR  &kp TILDE &none                             &none &kp N4 &kp N5 &kp N6 &kp KP_MULTIPLY &kp GRAVE
+            &none &none &kp PERCENT  &kp CARET   &none     &none &none &none     &none &none &none &kp N1 &kp N2 &kp N3 &kp KP_PLUS     &none
+                                     &none       &none     &none &none &none     &none &none &none &kp N0 &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         navigation {
             // ---------------------------------------------------------------------------------------------------------------------------------
-            // | _ | _  |  _ |  _  |  _   | _  |                  				| _ |  _  |  _  |  _  |   _   | _ |
-            // | _ | _  |  _ |  _  |  _   | _  |                  				| l |  d  |  u  |  r  |   _   | _ |
-            // | _ | _  |  _ |  _  |  _   | _  | _   | _  |    | _ | _ 	| _ |  _  |  _  |  _  |   _   | _ |
-            //               |  _  |  _   | _  | _   | _  |    | _ | _ 	| _ |  _  |  _  |
+            // | BT_CLR | _  |  _    |  _       |  _         | _          |                                         | _      |  _      |  _  |  _      |   _   | _ |
+            // | _      | _  |  _    |  _       |  _         | _          |                                         | l      |  d      |  u  |  r      |   _   | _ |
+            // | _      | _  |  _    |  _       |  _         | _          |   _       |  _   |          | _   | _   | _      |  _      |  _  |  _      |   _   | _ |
+            //                       |  BT_NXT  |  BT0       | BT1        | BT2       | BT3  |          | _   | _   | _      |  _      |  _  |
             bindings = <
-            &none &none &none &none &none &none                              							&none 		&none 		&none 	&none 		&none &none
-            &none &none &none &none &none &none                              							&kp LEFT 	&kp DOWN 	&kp UP 	&kp RIGHT 	&none &none
-            &none &none &none &none &none &none &none &none     &none &none 	&none 		&none 		&none 	&none 		&none &none
-                    	      &none &none &none &none &none   	&none &none 	&none 		&none 		&none
+            &bt BT_CLR  &none &none  &none      &none        &none                                                   &none    &none    &none  &none     &none &none
+            &none       &none &none  &none      &none        &none                                                   &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
+            &none       &none &none  &none      &none        &none        &none        &none             &none &none &none    &none    &none  &none     &none &none
+                                     &bt BT_NXT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3      &none &none &none    &none    &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-		};
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
 
     };
 };
