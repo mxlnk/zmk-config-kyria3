@@ -27,15 +27,15 @@
 
         default_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  Q  |  W  |  E   |  R     |  T     |                                                                              |  Y     |  U     |  I    |  O   |   P      |   \       |
-            // | SHIFT |  A  |  S  |  D   |  F     |  G     |                                                                              |  H     |  J     |  K    |  L   |   ;      |  SHIFT '  |
-            // |  CTL  |  Z  |  X  |  C   |  V     |  B     |  RET NAVS      |   (                |  |       )             |   DEL NAVS    |  N     |  M     |  ,    |  .   |   /      |   - _     |
-            //                     | GUI  | ALT    |  NUMS  |  SPACE         |   [{               |  |       }]            |   SHFT BSP    |  NUMS  | TAB    |  GUI  |
+            // |  ESC  |  Q  |  W  |  E   |  R     |  T     |                                                                              |  Y     |  U      |  I    |  O   |   P      |   \       |
+            // | SHIFT |  A  |  S  |  D   |  F     |  G     |                                                                              |  H     |  J      |  K    |  L   |   ;      |  SHIFT '  |
+            // |  CTL  |  Z  |  X  |  C   |  V     |  B     |  RET NAVS      |   (                |  |       )             |   DEL NAVS    |  N     |  M      |  ,    |  .   |   /      |   - _     |
+            //                     | GUI  | CMD    |  ALT   |  SPACE NUMS    |   [{               |  |       }]            |   BSP NUMS    |  TAB   | CMD     |  GUI  |
             bindings = <
-            &kp ESC   &kp Q &kp W &kp E    &kp R    &kp T                                                                                   &kp Y    &kp U   &kp I     &kp O   &kp P    &kp BSLH
-            &kp LSHFT &kp A &kp S &kp D    &kp F    &kp G                                                                                   &kp H    &kp J   &kp K     &kp L   &kp SEMI &mt RSHIFT SQT
-            &kp LCTRL &kp Z &kp X &kp C    &kp V    &kp B    &lt NAVS RET     &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS &lt NAVS DEL    &kp N    &kp M   &kp COMMA &kp DOT &kp FSLH &kp MINUS
-                                  &kp LGUI &kp LALT &mo NUMS &mt RSHIFT SPACE &kp LEFT_BRACKET        &kp RIGHT_BRACKET     &mt RSHIFT BSPC &mo NUMS &kp TAB &kp LGUI
+            &kp ESC   &kp Q &kp W &kp E    &kp R    &kp T                                                                                   &kp Y    &kp U    &kp I     &kp O   &kp P    &kp BSLH
+            &kp LSHFT &kp A &kp S &kp D    &kp F    &kp G                                                                                   &kp H    &kp J    &kp K     &kp L   &kp SEMI &mt RSHIFT SQT
+            &kp LCTRL &kp Z &kp X &kp C    &kp V    &kp B    &lt NAVS RET     &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS &lt NAVS DEL    &kp N    &kp M    &kp COMMA &kp DOT &kp FSLH &kp MINUS
+                                  &kp LGUI &kp LCMD &kp LALT &lt NUMS SPACE   &kp LEFT_BRACKET        &kp RIGHT_BRACKET     &lt NUMS BSPC   &kp TAB  &kp RCMD &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp UP DOWN>;
@@ -59,15 +59,15 @@
 
         navigation {
             // ---------------------------------------------------------------------------------------------------------------------------------
-            // | BT_CLR | _  |  _    |  _       |  _         | _          |                                         | _      |  _      |  _  |  _      |   _   | _ |
-            // | _      | _  |  _    |  _       |  _         | _          |                                         | l      |  d      |  u  |  r      |   _   | _ |
-            // | _      | _  |  _    |  _       |  _         | _          |   _       |  _   |          | _   | _   | _      |  _      |  _  |  _      |   _   | _ |
-            //                       |  BT_NXT  |  BT0       | BT1        | BT2       | BT3  |          | _   | _   | _      |  _      |  _  |
+            // | BT_CLR | F1  |  F2   |  F3      |  F4        | F5         |                                         | _      |  _      |  _  |  _      |   _   | _ |
+            // | _      | _   |  _    |  _       |  _         | _          |                                         | l      |  d      |  u  |  r      |   _   | _ |
+            // | _      | _   |  _    |  _       |  _         | _          |   _       |  _   |          | _   | _   | _      |  _      |  _  |  _      |   _   | _ |
+            //                        |  BT_NXT  |  BT0       | BT1        | BT2       | BT3  |          | _   | _   | _      |  _      |  _  |
             bindings = <
-            &bt BT_CLR  &none &none  &none      &none        &none                                                   &none    &none    &none  &none     &none &none
-            &none       &none &none  &none      &none        &none                                                   &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
-            &none       &none &none  &none      &none        &none        &none        &none             &none &none &none    &none    &none  &none     &none &none
-                                     &bt BT_NXT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3      &none &none &none    &none    &none
+            &bt BT_CLR  &kp F1 &kp F2 &kp F3     &kp F4       &kp F5                                                  &none    &none    &none  &none     &none &none
+            &none       &none  &none  &none      &none        &none                                                   &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
+            &none       &none  &none  &none      &none        &none        &none        &none             &none &none &none    &none    &none  &none     &none &none
+                                      &bt BT_NXT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3      &none &none &none    &none    &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
